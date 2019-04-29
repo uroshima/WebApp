@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react';
+import Helmet from 'react-helmet';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import Button from '@material-ui/core/Button';
@@ -6,7 +7,7 @@ import { withStyles } from '@material-ui/core/styles';
 import LocationIcon from '@material-ui/icons/LocationOn';
 import { HeaderForCampaigns, Title, BlueTitle, SubTitle } from '../components/Welcome/Header';
 import Section, { SectionTitle, SectionTitleBold, Step, StepNumber, StepLabel, GetStarted, ButtonContainer, DescriptionContainer, DescriptionLeftColumn, DescriptionImageColumn, Description, Image, Bold, NetworkContainer, NetworkImage } from '../components/Welcome/Section';
-import WelcomeAppbar from '../components/Welcome/WelcomeAppbar';
+import WelcomeAppbar from '../components/Navigation/WelcomeAppbar';
 import Footer from '../components/Welcome/Footer';
 import AddressBox from '../components/Welcome/AddressBox';
 import { historyPush, cordovaDot } from '../utils/cordovaUtils';
@@ -95,6 +96,7 @@ class WelcomeForCampaigns extends PureComponent {
     const testimonial = 'Following the values that are important to me shows me opinions on my ballot from other people who share my values.';
     return (
       <Wrapper>
+        <Helmet title="Welcome Campaigns - We Vote" />
         <WelcomeAppbar pathname={pathname} />
         <HeaderForCampaigns>
           <Title>

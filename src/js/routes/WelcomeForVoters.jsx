@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react';
+import Helmet from 'react-helmet';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import Button from '@material-ui/core/Button';
@@ -8,7 +9,7 @@ import PersonIcon from '@material-ui/icons/Person';
 import EmailIcon from '@material-ui/icons/Email';
 import Header, { Title, BlueTitle, SubTitle, Video, PlayerContainer } from '../components/Welcome/Header';
 import Section, { SectionTitle, SectionTitleBold, Step, StepNumber, StepLabel, GetStarted, ButtonContainer, DescriptionContainer, DescriptionLeftColumn, DescriptionImageColumn, Description, Image, Bold, NetworkContainer, NetworkImage, SignUpContainer, SignUpMessage } from '../components/Welcome/Section';
-import WelcomeAppbar from '../components/Welcome/WelcomeAppbar';
+import WelcomeAppbar from '../components/Navigation/WelcomeAppbar';
 import Footer from '../components/Welcome/Footer';
 import TextBox from '../components/Welcome/TextBox';
 import AddressBox from '../components/Welcome/AddressBox';
@@ -100,6 +101,7 @@ class Welcome extends PureComponent {
     const testimonial = 'Following the values that are important to me shows me opinions on my ballot from other people who share my values.';
     return (
       <Wrapper>
+        <Helmet title="Welcome Voters - We Vote" />
         <WelcomeAppbar pathname={pathname} />
         <Header>
           <Title>

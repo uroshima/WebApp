@@ -1,11 +1,12 @@
 import React, { PureComponent } from 'react';
+import Helmet from 'react-helmet';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 // import Button from '@material-ui/core/Button';
 import { withStyles } from '@material-ui/core/styles';
 import Header, { Title, BlueTitle, SubTitle, Video, PlayerContainer } from '../components/Welcome/Header';
 import Section, { SectionTitle, SectionTitleBold, DescriptionContainer, DescriptionLeftColumn, DescriptionImageColumn, Description, Image, Bold, NetworkContainer, NetworkImage } from '../components/Welcome/Section';
-import WelcomeAppbar from '../components/Welcome/WelcomeAppbar';
+import WelcomeAppbar from '../components/Navigation/WelcomeAppbar';
 import Footer from '../components/Welcome/Footer';
 import { historyPush, cordovaDot } from '../utils/cordovaUtils';
 import Testimonial from '../components/Widgets/Testimonial';
@@ -92,6 +93,7 @@ class WelcomeForOrganizations extends PureComponent {
     const testimonial = 'We don\'t care who you vote for, just VOTE.';
     return (
       <Wrapper>
+        <Helmet title="Welcome Organizations - We Vote" />
         <WelcomeAppbar pathname={pathname} />
         <Header>
           <Title>
